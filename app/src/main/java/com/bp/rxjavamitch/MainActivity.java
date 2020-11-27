@@ -25,9 +25,21 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         text = findViewById(R.id.text);
+        
+        playPart1();
+        playPart2();
+        
 
+    }
+
+    // Flowables
+    private void playPart2() {
+
+    }
+
+    //observer and observable
+    void playPart1(){
         // create an observable object
         Observable<Task> taskObservable = Observable
                 .fromIterable(DataSource.createTaskList())
